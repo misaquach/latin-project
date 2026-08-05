@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<head>
+<title>Homepage | Mos Maiorum</title>
+<meta charset="UTF-8">
 <style>
 body{
     background-color:rgb(224, 215, 198);
@@ -10,70 +14,56 @@ body{
     h3{color:white;}
 
 }
-.quiz{
-    background-color:rgb(167, 154, 139);
-    margin:20px;
-    padding:10px;
+.container{
+  margin:auto;max-width:900px;width:50%;height:calc(85vh);margin-bottom:0px;padding-bottom:0px;
 }
-ul ul{padding-left:10px;}
+.tabletitle{
+  td{background-color:rgb(25, 10, 22);text-align:center;padding:5px;color:white}
+}
+.tablecontent{
+  td{background-color:rgb(204, 195, 180);
+    padding:5px;
+    color:gray;
+    a{color:black;
+    text-decoration:none;}
+    a:hover{
+      color:crimson;
+      text-decoration:underline
+    }}
+}
+p, td, li{color:rgb(247, 213, 219)}
+td{width:30%;}
+.titleblock{margin-top:-30px;background-image:linear-gradient(rgba(0, 0, 0, 0.421),rgb(38, 19, 27));}
+.middleblock{margin-top:-30px;background-color:rgb(38, 19, 27);}
+footer{background-color:rgb(25, 19, 14);width:100%;height:30vh;margin:auto;margin-bottom:-20px;max-width:900px;width:50%;}
+@media screen and (min-width:320px) and (max-width:640px) {
+    .container, footer{width:100%;}}
 </style>
-<table style="height:100%;">
-    <tr>
-    <td style="width:30%;vertical-align:top;">
-        <div class="sidebar"><h1>Project Aventine</h1>
-        <h3><i>Interactable Lessons in Latin</i></h3>
-        <h2>Lessons</h2>
-        <p>I. Accusative, Nominative; the First Decclension</p>
-        <h2>Practice</h2>
-        <hr>
-        <p><i>No A.I. will ever be used in this website.</i></p>
-    </div></td>
-    <td style="vertical-align:top;padding:20px;">
-        <h1>Lesson I. The Basics</h1>
-        <h3>CASES: THE NOMINATIVE AND ACCUSATIVE</h3>
-        <p>A <b>case</b> is a form that a word takes based on how it relates to verbs and other nouns in a sentence. For example, take the sentence <i>"She likes me."</i> Since "I" am the one being liked, the word used is "me" instead of "I." If "she" were liked, we would say "her."</p>
-        <p>In English, only pronouns are affected by cases; in Latin, nouns and adjectives are as well. Let's look at two basic cases.</b></p>
-        <ul>
-            <li><b>NOMINATIVE:</b> the agent behind the verb. The one <i>doing</i> something.</li>
-            <ul><li><b>The river</b> crosses the valley.</li>
-            <li><b>We</b> will resurrect the Empire.</li></ul>
-            <li><b>ACCUATIVE:</b> the one affected by the verb.</li><ul>
-            <li>The river crosses <b>the valley.</b></li>
-            <li>We will resurrect <b>the Empire.</b></li></ul>
-        </ul>
-        <h3>Declension One</h3>
-        <p>Nouns are sorted into <b>declensions</b> based on what letter they end in. Different endings lead to different case endings. Declension I nouns end with <b>-a</b> in the nominative; <b>-am</b> in the accusative.</p>
-        <ul>
-            <li><b>stella: </b>star</li>
-            <li><b>Roma: </b>Rome</li>
-            <li><b>puella: </b>girl</li>
-            <li><b>vīta:</b> life</li>
-            <li><b>via:</b> way, road</li>
-            <li><b>patria:</b> country, fatherland</li>
-            <li><b>terra: </b>land</li>
-        </ul>
-        <h3>Other Vocabulary</h3>
-        <ul>
-            <li><b>non:</b> not</li>
-            <li><b>videt:</b> sees</li>
-            <li><b>amat:</b> likes, loves</li>
-            <li><b>bibit:</b> drinks</li>
-            <li><b>vult: </b>wants</li>
-        </ul>
-        <p>Note that in Latin, words go in this order: nominative, accusative, verb. There are also no words for 'the' and 'a.'</p><p>Let's look at some basic sentences. </p>
-        <ul>
-            <li>Puella stellas videt. <i>The girl sees the stars.</i> [Lit.: The girl the stars sees.]</li>
-            <li>Puella patriam non amat. <i>The girl does not like the country.</i></li>
-            
-        </ul>
-        <div class="quiz"><h4>Quiz</h4>
+</head>
 
-        </div>
-        <h3>Pronunciation</h3>
-        <p>Latin letters are pronounced a little differently.</p>
-        <table style="border:1px solid black"><tr><td>a</td><td>a</td></tr>
-            <tr></tr>
-        </table>
-        </td>
-    </tr>
-</table>
+<body style="background-image:url(https://mos-maiorum.neocities.org/imagines/peter_conrad.gif);background-size:cover;">
+<div class="container">
+  <div class="titleblock">
+  <center><h1 style="padding-top:150px;color:white;">MOS·MAIORVM</h1></center>
+</div>
+  <div class="middleblock" style="height:100%;">
+    <div style="padding:20px;">
+      <p style="color:rgb(247, 213, 219)">
+        Welcome to <b>Mos Maiorum</b>, a free Latin educational site. The site's name, meaning <i>ways of the ancients</i>, was an important concept to the Romans, one of upholding the beauty of the past that it may not die away. In the same way, this site aims to pass on the tradition of Latin that has continued for thousands of years.
+      </p>
+      <table style="width:100%;">
+        <tr class="tabletitle"><td>Learn</td><td>Practice</td><td>Miscellany</td></tr>
+        <tr class="tablecontent">
+          <td><a href="https://mos-maiorum.neocities.org/disciplinae/pars-i/pronuntatio">Pronunciation</a><br>Part One</td>
+          <td>T.B.A.</td>
+          <td>How to write your name in Latin</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+  <footer>
+  <center style="padding-top:20px;">
+    <p style="color:rgb(232, 202, 180)">Est. 2026</p>
+  </center>
+  </footer>
+</body>

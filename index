@@ -1,0 +1,79 @@
+<style>
+body{
+    background-color:rgb(224, 215, 198);
+}
+.sidebar{
+    background-color:rgb(38, 19, 27);
+    margin:0px;
+    padding:10px;
+    h1{color:white}
+    h3{color:white;}
+
+}
+.quiz{
+    background-color:rgb(167, 154, 139);
+    margin:20px;
+    padding:10px;
+}
+ul ul{padding-left:10px;}
+</style>
+<table style="height:100%;">
+    <tr>
+    <td style="width:30%;vertical-align:top;">
+        <div class="sidebar"><h1>Project Aventine</h1>
+        <h3><i>Interactable Lessons in Latin</i></h3>
+        <h2>Lessons</h2>
+        <p>I. Accusative, Nominative; the First Decclension</p>
+        <h2>Practice</h2>
+        <hr>
+        <p><i>No A.I. will ever be used in this website.</i></p>
+    </div></td>
+    <td style="vertical-align:top;padding:20px;">
+        <h1>Lesson I. The Basics</h1>
+        <h3>CASES: THE NOMINATIVE AND ACCUSATIVE</h3>
+        <p>A <b>case</b> is a form that a word takes based on how it relates to verbs and other nouns in a sentence. For example, take the sentence <i>"She likes me."</i> Since "I" am the one being liked, the word used is "me" instead of "I." If "she" were liked, we would say "her."</p>
+        <p>In English, only pronouns are affected by cases; in Latin, nouns and adjectives are as well. Let's look at two basic cases.</b></p>
+        <ul>
+            <li><b>NOMINATIVE:</b> the agent behind the verb. The one <i>doing</i> something.</li>
+            <ul><li><b>The river</b> crosses the valley.</li>
+            <li><b>We</b> will resurrect the Empire.</li></ul>
+            <li><b>ACCUATIVE:</b> the one affected by the verb.</li><ul>
+            <li>The river crosses <b>the valley.</b></li>
+            <li>We will resurrect <b>the Empire.</b></li></ul>
+        </ul>
+        <h3>Declension One</h3>
+        <p>Nouns are sorted into <b>declensions</b> based on what letter they end in. Different endings lead to different case endings. Declension I nouns end with <b>-a</b> in the nominative; <b>-am</b> in the accusative.</p>
+        <ul>
+            <li><b>stella: </b>star</li>
+            <li><b>Roma: </b>Rome</li>
+            <li><b>puella: </b>girl</li>
+            <li><b>vīta:</b> life</li>
+            <li><b>via:</b> way, road</li>
+            <li><b>patria:</b> country, fatherland</li>
+            <li><b>terra: </b>land</li>
+        </ul>
+        <h3>Other Vocabulary</h3>
+        <ul>
+            <li><b>non:</b> not</li>
+            <li><b>videt:</b> sees</li>
+            <li><b>amat:</b> likes, loves</li>
+            <li><b>bibit:</b> drinks</li>
+            <li><b>vult: </b>wants</li>
+        </ul>
+        <p>Note that in Latin, words go in this order: nominative, accusative, verb. There are also no words for 'the' and 'a.'</p><p>Let's look at some basic sentences. </p>
+        <ul>
+            <li>Puella stellas videt. <i>The girl sees the stars.</i> [Lit.: The girl the stars sees.]</li>
+            <li>Puella patriam non amat. <i>The girl does not like the country.</i></li>
+            
+        </ul>
+        <div class="quiz"><h4>Quiz</h4>
+
+        </div>
+        <h3>Pronunciation</h3>
+        <p>Latin letters are pronounced a little differently.</p>
+        <table style="border:1px solid black"><tr><td>a</td><td>a</td></tr>
+            <tr></tr>
+        </table>
+        </td>
+    </tr>
+</table>

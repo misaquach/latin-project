@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declinatio prima</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+<body>
+  <p>
+    <p>WORD: <span id="givenWord"></p>
+    <p>DECLINATION: <span id="givenDecl"></p>
+    <form id="questionForm" onsubmit="submitAnswer();reset();return false">
+      <label for="writtenAnswer">YOUR ANSWER:
+        <input type="text" id="fname" name="fname">
+      </label>
+      <input type="button" id = "btn" onclick="submitAnswer()" value="Submit">
+    </form>
+    For the user's convenience, there is no need to differentiate long and short vowels in answers.
+  </p>
+
+  <p id="answerCheck"></p>
+<details>
+  <table border="1">
+    <tr>
+      <td></td>
+      <td>Nom.</td>
+      <td>Gen.</td>
+      <td>Dat.</td>
+      <td>Acc.</td>
+      <td>Abl.</td>
+    </tr>
+    <tr>
+      <td>Singular</td>
+      <td>poēta</td>
+      <td>poētae</td>
+      <td>poētae</td>
+      <td>poētam</td>
+      <td>poētā</td>
+    </tr>
+    <tr>
+      <td>Plural</td>
+      <td>poētae</td>
+      <td>poētārum</td>
+      <td>poētīs</td>
+      <td>poētās</td>
+      <td>poētīs</td>
+    </tr>
+  </table>
+</details>
+<script>
+var i = 0;
+const stem = ['vi', 'puell', 'de', 'Graec', 'Caligul'];
+
+//Randomness generator
+const nomSing = {
+    declTitle: 'nom. sg.',
+    decl: 'a'
+};
+
+const accSing = {
+    declTitle: 'acc. sg.',
+    decl:'am'
+};
+
+const datSing = {
+    declTitle: 'dat. sg.',
+    decl:'ae'
+};
+
+const genSing = {
+    declTitle: 'gen. sg.',
+    decl:'ae'
+};
+
+const ablSing = {
+    declTitle: 'abl. sg.',
+    decl:'a'
+};
+
+const nomPl = {
+    declTitle: 'nom. pl.',
+    decl:'ae'
+};
+
+const accPl = {
+    declTitle: 'acc. pl.',
+    decl:'as'
+};
+
+const datPl = {
+    declTitle: 'dat. pl.',
+    decl:'is'
+};
+
+const genPl = {
+    declTitle: 'gen. pl.',
+    decl:'arum'
+};
+
+const ablPl = {
+    declTitle: 'abl. pl.',
+    decl:'is'
+};
+
+    const declensions = [accSing, datSing, genSing, ablSing, nomPl, accPl, datPl, genPl, ablPl];
+    let givenDeclension = Math.floor(Math.random() * declensions.length);
+    var correctAnswer = stem[i] + declensions[givenDeclension].decl;
+    //Creates the first prompt.
+    function printPrompt(){
+        document.getElementById("givenWord").innerHTML = stem[i] + 'a';
+        correctAnswer = stem[i] + declensions[givenDeclension].decl;
+        document.getElementById("givenDecl").innerHTML = declensions[givenDeclension].declTitle;}
+    printPrompt();
+
+
+
+    //Creates and evaluates the submitted answer.
+    function submitAnswer(){
+      var writtenAnswer = document.getElementById("fname");
+      var input = document.getElementById("fname").value;
+      if (input == correctAnswer){
+          document.getElementById("answerCheck").innerHTML = "Correct.";
+          i = i + 1;
+          givenDeclension = givenDeclension = Math.floor(Math.random() * declensions.length);
+          printPrompt(stem);
+        } else if (i > 0) {document.getElementById("answerCheck").innerHTML = "Nope.";} else {
+            document.getElementById("answerCheck").innerHTML = "Incorrect.";
+          }
+        
+      }
+
+  </script>
+</body>

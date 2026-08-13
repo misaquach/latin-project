@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<head>
+<title>Declension III</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://mos-maiorum.neocities.org/lingua-latina.css">
+<script src="https://mos-maiorum.neocities.org/sidebar.js"></script>
+</head>
+<body>
+<div class="sides-container">
+<div id="sidebar-container"></div>
+<div class="right-side"><h1>Declension Three</h1>
+  <h4>Non i-stems</h4>
+        <hr> 
+  <p>
+    <p>WORD: <span id="givenWord"></p>
+    <p>DECLINATION: <span id="givenDecl"></p>
+    <form id="questionForm" onsubmit="submitAnswer();reset();return false" autocapitalize="false">
+      <label for="writtenAnswer">YOUR ANSWER:
+        <input type="text" id="entry" name="entry" autocapitalize="false">
+      </label>
+      <input type="button" id = "btn" onclick="submitAnswer()" value="Submit">
+    </form>
+  <p>
+    For the user's convenience, there is no need to differentiate long and short vowels in answers.
+  </p>
+
+  <p id="answerCheck"></p>
+<details>
+  <p>Feminine and masculine:</p>
+  <table>
+    <tr>
+      <td></td>
+      <td>Nom.</td>
+      <td>Gen.</td>
+      <td>Dat.</td>
+      <td>Acc.</td>
+      <td>Abl.</td>
+    </tr>
+    <tr>
+      <td>Singular</td>
+      <td>homō</td>
+      <td>homin<b>is</b></td>
+      <td>homin<b>ī</b></td>
+      <td>homin<b>em</b></td>
+      <td>homin<b>e</b></td>
+    </tr>
+    <tr>
+      <td>Plural</td>
+      <td style="background-color:rgb(215, 194, 148)">homin<b>ēs</b></td>
+      <td>homin<b>um</b></td>
+      <td>homin<b>ibus</b></td>
+      <td style="background-color:rgb(215, 194, 148)">homin<b>ēs</b></td>
+      <td>homin<b>ibus</b></td>
+    </tr>
+  </table>
+  <p>Neuter:</p>
+  <table>
+    <tr>
+      <td></td>
+      <td>Nom.</td>
+      <td>Gen.</td>
+      <td>Dat.</td>
+      <td>Acc.</td>
+      <td>Abl.</td>
+    </tr>
+    <tr>
+      <td>Singular</td>
+      <td>nōmen</td>
+      <td>nōmin<b>is</b></td>
+      <td>nōmin<b>ī</b></td>
+      <td>nōmin<b>em</b></td>
+      <td>nōmin<b>e</b></td>
+    </tr>
+    <tr>
+      <td>Plural</td>
+      <td style="background-color:rgb(215, 194, 148)">nōmin<b>a</b></td>
+      <td>nōmin<b>um</b></td>
+      <td>nōmin<b>ibus</b></td>
+      <td style="background-color:rgb(215, 194, 148)">nōmin<b>a</b></td>
+      <td>nōmin<b>ibus</b></td>
+    </tr>
+  </table>
+  <summary>Hint</summary>
+</details>
+<script>
+let i = 0;
+var g;
+let theWord= [{
+nom:'voluntas',
+stem:'voluntat',
+gend:0,
+},
+{
+nom:'voluptas',
+stem:'voluptat',
+gend:0,
+},{
+nom:'tempestas',
+stem:'tempestat',
+gend:0,
+},{
+nom:'potestas',
+stem:'potestat',
+gend:0
+},
+{
+nom:'pax',
+stem:'pac',
+gend:0
+},
+{
+nom:'aer',
+stem:'aer',
+gend:1
+},
+
+{
+nom:'arbor',
+stem:'arbor',
+gend:0
+},
+{
+nom:'flos',
+stem:'flor',
+gend:1
+},
+{
+nom:'homo',
+stem:'homin',
+gend:1
+},
+{nom: 'pectus',
+stem:'pector',
+gend:2
+},
+{nom:'pecus',
+stem:'pecor',
+gend:2
+},
+{nom:'nomen',
+stem:'nomin',
+gend:2
+},
+{nom:'munus',
+stem:'muner',
+gend:2
+},
+{nom:'nemus',
+stem:'nemor',
+gend:2
+},
+{nom:'limen',
+stem:'limin',
+gend:2
+},
+{nom:'litus',
+stem:'litor',
+gend:2
+}
+];
+
+//Randomness generator
+const accSing = {declTitle:'acc. sg.', decl:'em'}
+const datSing = {declTitle:'dat. sg.', decl:'i'}
+const genSing = {declTitle:'gen. sg.', decl:'is'}
+const ablSing = {declTitle:'abl. sg.', decl:'e'}
+const nomPl = {declTitle:'nom. pl.', decl:'es'}
+const accPl = {declTitle:'acc. pl.', decl:'es'}
+const datPl = {declTitle:'dat. pl.', decl:'ibus'}
+const genPl = {declTitle:'gen. pl.', decl:'um'}
+const ablPl = {declTitle:'abl. pl.', decl:'ibus'}
+const nomPlN={declTitle:'nom. pl.', decl:'a'}
+const accPlN={declTitle:'acc. pl.', decl:'a'}
+//
+const cases = [accSing, datSing, genSing, ablSing, nomPl, accPl, datPl, genPl, ablPl];
+const casesN = [accSing, datSing, genSing, nomPlN, accPlN, datPl, genPl, ablPl];
+let givenCase = Math.floor(Math.random() * casesN.length);
+//Now we have the case, and now we need a shitload of "if" statements.
+console.log(theWord[i].gend.value);
+  if (theWord[i].gend == 0)
+{ g = '(f.)'
+}
+  else if (theWord[i].gend == 1)
+{ g = '(m.)'}
+  else if (theWord[i].gend == 2)
+{ g = '(n.)'};
+
+//Creates the first prompt.
+function printPrompt(){
+if (theWord[i].gend <=1){
+        document.getElementById("givenWord").innerHTML = '<i>' + theWord[i].nom +'</i>, stem ' +  '<i>' + theWord[i].stem + '-  ' + g;
+        correctAnswer = theWord[i].stem + cases[givenCase].decl;
+        document.getElementById("givenDecl").innerHTML = cases[givenCase].declTitle;
+} else {
+        document.getElementById("givenWord").innerHTML = theWord[i].nom;
+        correctAnswer = theWord[i].stem + casesN[givenCase].decl;
+        document.getElementById("givenDecl").innerHTML = casesN[givenCase].declTitle;}}
+
+printPrompt();
+
+//Creates and evaluates the submitted answer.
+function submitAnswer(){
+      var writtenAnswer = document.getElementById("entry");
+      var input = document.getElementById("entry").value;
+      if (input == correctAnswer){
+          document.getElementById("answerCheck").innerHTML = "Correct.";
+          i = i + 1;
+          givenCase = givenCase = Math.floor(Math.random() * cases.length);
+          printPrompt(theWord[i].stem);
+        } else if (i > 0) {document.getElementById("answerCheck").innerHTML = "Nope.";} else {
+            document.getElementById("answerCheck").innerHTML = "Incorrect.";
+          }
+      if (i >= theWord.length - 1)
+      {i = i - theWord.length;
+        console.log(theWord.length)
+      }
+}
+  </script>
+  </body> 

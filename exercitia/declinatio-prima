@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declinatio prima</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-  </head>
+<head>
+<title>Declension I</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://mos-maiorum.neocities.org/lingua-latina.css">
+<script src="https://mos-maiorum.neocities.org/sidebar.js"></script>
+</head>
 <body>
+<div class="sides-container">
+<div id="sidebar-container"></div>
+<div class="right-side"><h1>Declension One</h1>
+        <hr> 
   <p>
     <p>WORD: <span id="givenWord"></p>
     <p>DECLINATION: <span id="givenDecl"></p>
-    <form id="questionForm" onsubmit="submitAnswer();reset();return false">
+    <form id="questionForm" onsubmit="submitAnswer();reset();return false" autocapitalize="false">
       <label for="writtenAnswer">YOUR ANSWER:
-        <input type="text" id="fname" name="fname">
+        <input type="text" id="fname" name="fname" autocapitalize="false">
       </label>
       <input type="button" id = "btn" onclick="submitAnswer()" value="Submit">
     </form>
-    For the user's convenience, there is no need to differentiate long and short vowels in answers.
+  <br>
+    <p>For the user's convenience, there is no need to differentiate long and short vowels in answers.
   </p>
 
   <p id="answerCheck"></p>
@@ -32,76 +36,37 @@
     </tr>
     <tr>
       <td>Singular</td>
-      <td>poēta</td>
-      <td>poētae</td>
-      <td>poētae</td>
-      <td>poētam</td>
-      <td>poētā</td>
+      <td>poēt<b>a</b></td>
+      <td>poēt<b>ae</b></td>
+      <td>poēt<b>ae</b></td>
+      <td>poēt<b>am</b></td>
+      <td>poēt<b>ā</b></td>
     </tr>
     <tr>
       <td>Plural</td>
-      <td>poētae</td>
-      <td>poētārum</td>
-      <td>poētīs</td>
-      <td>poētās</td>
-      <td>poētīs</td>
+      <td>poēt<b>ae</b></td>
+      <td>poēt<b>ārum</b></td>
+      <td>poēt<b>īs</b></td>
+      <td>poēt<b>ās</b></td>
+      <td>poēt<b>īs</b></td>
     </tr>
-  </table>
+  </table><summary>Hint</summary>
 </details>
 <script>
-var i = 0;
-const stem = ['vi', 'puell', 'de', 'Graec', 'Caligul'];
+let i = 0;
+const stem = ['vi', 'puell', 'de', 'poet', 'apertur', 'materi', 'memori', 'mens', 'pecuni', 'port', 'ling', 'lacrim', 'turb', 'und', 'umbr', 'hor', 'grati', 'form', 'aqu', 'natur', 'lun', 'litter', 'sententi', 'scienti', 'provinci', 'praed', 'poen', 'oper', 'mor', 'apertur', 'aqu', 'natur', 'lun'];
 
 //Randomness generator
-const nomSing = {
-    declTitle: 'nom. sg.',
-    decl: 'a'
-};
-
-const accSing = {
-    declTitle: 'acc. sg.',
-    decl:'am'
-};
-
-const datSing = {
-    declTitle: 'dat. sg.',
-    decl:'ae'
-};
-
-const genSing = {
-    declTitle: 'gen. sg.',
-    decl:'ae'
-};
-
-const ablSing = {
-    declTitle: 'abl. sg.',
-    decl:'a'
-};
-
-const nomPl = {
-    declTitle: 'nom. pl.',
-    decl:'ae'
-};
-
-const accPl = {
-    declTitle: 'acc. pl.',
-    decl:'as'
-};
-
-const datPl = {
-    declTitle: 'dat. pl.',
-    decl:'is'
-};
-
-const genPl = {
-    declTitle: 'gen. pl.',
-    decl:'arum'
-};
-
-const ablPl = {
-    declTitle: 'abl. pl.',
-    decl:'is'
-};
+const nomSing = {declTitle:'nom. sg.', decl:'a'}
+const accSing = {declTitle:'acc. sg.', decl:'am'}
+const datSing = {declTitle:'dat. sg.', decl:'ae'}
+const genSing = {declTitle:'gen. sg.', decl:'ae'}
+const ablSing = {declTitle:'abl. sg.', decl:'a'}
+const nomPl = {declTitle:'nom. pl.', decl:'ae'}
+const accPl = {declTitle:'acc. pl.', decl:'as'}
+const datPl = {declTitle:'dat. pl.', decl:'is'}
+const genPl = {declTitle:'gen. pl.', decl:'arum'}
+const ablPl = {declTitle:'abl. pl.', decl:'is'}
 
     const declensions = [accSing, datSing, genSing, ablSing, nomPl, accPl, datPl, genPl, ablPl];
     let givenDeclension = Math.floor(Math.random() * declensions.length);
@@ -112,8 +77,6 @@ const ablPl = {
         correctAnswer = stem[i] + declensions[givenDeclension].decl;
         document.getElementById("givenDecl").innerHTML = declensions[givenDeclension].declTitle;}
     printPrompt();
-
-
 
     //Creates and evaluates the submitted answer.
     function submitAnswer(){
@@ -127,8 +90,11 @@ const ablPl = {
         } else if (i > 0) {document.getElementById("answerCheck").innerHTML = "Nope.";} else {
             document.getElementById("answerCheck").innerHTML = "Incorrect.";
           }
-        
+      if (i >= stem.length - 1)
+      {i = i - stem.length;
+        console.log(stem.length)
+      }
       }
 
   </script>
-</body>
+  </body>  

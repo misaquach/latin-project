@@ -1,0 +1,82 @@
+body{
+    background-image:url(https://mos-maiorum.neocities.org/imagines/sebastiano_marco_ricci.png);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    font-family:serif
+    ::selection{
+      background-color:rgba(164, 187, 104, 0.586);
+    }
+    
+}
+.sides-container{
+  max-width:800px;
+  margin:auto;
+}
+.left-side{
+     border-radius: 25px;
+     float:left;
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+    background-image:linear-gradient(rgb(61, 24, 24),rgb(39, 19, 27));
+    margin:0px;
+    padding:18px;
+    width:27%;
+    color:wheat;
+    margin-right:0px;
+    h1{color:rgb(224, 235, 235)}
+    h2{color:rgba(255, 236, 236, 0.805);}
+    h4{color:rgb(78, 114, 117);}
+    a, a:visited, a:hover{color:rgb(176, 64, 83);}
+    p{color:rgb(99, 67, 67);}
+    hr{border:1px dotted rgb(84, 97, 94);}
+    ::selection{background-color:rgba(210, 174, 66, 0.527);}}
+.right-side{
+  vertical-align:top;padding:20px;
+  float:left;
+  background-image:url(https://mos-maiorum.neocities.org/imagines/decoration/test-bg.png);
+  opacity:.9;
+  width:60%;
+  margin-left:0px;
+  min-height:100vh;
+  ::selection{background-color:rgba(188, 210, 66, 0.527);}
+  table, tr, td{
+    background:rgb(200, 189, 172);margin:auto;
+  }
+  tr,td{padding:5px;border:1px solid rgb(131, 119, 105);}
+  hr{border:1px solid rgb(205, 202, 197);}
+        
+}
+@media only screen and (max-width:800px){
+  .sides-container{width:100%;
+  margin-auto;}
+  .left-side{
+      float:none;
+      border-radius:25px;
+      border-bottom-left-radius:0px;
+      border-bottom-right-radius:0px;
+  }
+.right-side{
+  float:none;
+  }
+.left-side, .right-side{
+width:90%;
+}
+}
+.quiz{
+    background-color:rgb(167, 154, 139);
+    margin:auto;
+    max-width:500px;
+    box-shadow: 0px 0px 50px rgba(102, 63, 63, 0.147);
+    padding:29px;
+    .option{
+        padding:10px;
+    }
+    .incorrect{color:red;}
+}
+td{.difference{background-color:rgb(215, 194, 148)}}
+input, form{autocapitalize:off}
+h4{color:rgb(127, 123, 123);font-size:19px;margin-top:-15px;font-style:italic;}
+ul ul{padding-left:10px;}
+button{background:rgb(200, 189, 172);border:0px;font-family:serif;padding:10px;margin-top:30px;}
+button:hover{background:rgb(125, 184, 177);transition:background-color .2s;}

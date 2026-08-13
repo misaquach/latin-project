@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>Homepage | Mos Maiorum</title>
+<title>Home | Mos Maiorum</title>
 <meta charset="UTF-8">
 <style>
 body{
@@ -15,7 +15,7 @@ body{
 
 }
 .container{
-  margin:auto;max-width:900px;width:50%;height:calc(85vh);margin-bottom:0px;padding-bottom:0px;
+  margin:auto;max-width:900px;width:50%;height:800px;margin-bottom:0px;padding-bottom:0px;
 }
 .tabletitle{
   td{background-color:rgb(25, 10, 22);text-align:center;padding:5px;color:white}
@@ -35,7 +35,7 @@ p, td, li{color:rgb(247, 213, 219)}
 td{width:30%;}
 .titleblock{margin-top:-30px;background-image:linear-gradient(rgba(0, 0, 0, 0.421),rgb(38, 19, 27));}
 .middleblock{margin-top:-30px;background-color:rgb(38, 19, 27);}
-footer{background-color:rgb(25, 19, 14);width:100%;height:30vh;margin:auto;margin-bottom:-20px;max-width:900px;width:50%;}
+footer{background-color:rgb(25, 19, 14);width:100%;height:300px;margin:auto;margin-bottom:-20px;max-width:900px;width:50%;}
 @media screen and (min-width:320px) and (max-width:640px) {
     .container, footer{width:100%;}}
 </style>
@@ -49,21 +49,48 @@ footer{background-color:rgb(25, 19, 14);width:100%;height:30vh;margin:auto;margi
   <div class="middleblock" style="height:100%;">
     <div style="padding:20px;">
       <p style="color:rgb(247, 213, 219)">
-        Welcome to <b>Mos Maiorum</b>, a free Latin educational site. The site's name, meaning <i>ways of the ancients</i>, was an important concept to the Romans, one of upholding the beauty of the past that it may not die away. In the same way, this site aims to pass on the tradition of Latin that has continued for thousands of years.
+        Welcome to <b>Mos Maiorum</b>, a Greek and Latin educational site. The site's name, meaning <i>ways of the ancients</i>, was an important concept to the Romans, one of upholding the beauty of the past that it may not die away. In the same way, this site aims to pass on the tradition of Classics that has continued for thousands of years.
       </p>
+      <h2>Latin</h2>
       <table style="width:100%;">
         <tr class="tabletitle"><td>Learn</td><td>Practice</td><td>Miscellany</td></tr>
         <tr class="tablecontent">
-          <td><a href="https://mos-maiorum.neocities.org/disciplinae/pars-i/pronuntatio">Pronunciation</a><br>Part One</td>
+          <td>Pronunciation<br><a href="https://mos-maiorum.neocities.org/disciplinae/pars-i/pagina-i">Part I</a></td>
+          <td><a href="https://mos-maiorum.neocities.org/exercitia/declinatio-prima">Declension I</a>
+          <br><a href="https://mos-maiorum.neocities.org/exercitia/declinatio-tertia">Declension III</a></td>
+          <td>
+          Outline of Latin grammar<br>How to write your name in Latin<br>
+          The Greek legacy in Roman literature</td></tr>
+      </table>
+      <h2>Ancient Greek</h2>
+      <table style="width:100%;">
+        <tr class="tabletitle"><td>Learn</td><td>Practice</td><td>Miscellany</td></tr>
+        <tr class="tablecontent">
+          <td>Pronunciation</td>
           <td>T.B.A.</td>
-          <td>How to write your name in Latin</td></tr>
+          <td>Outline of Greek grammar
+          <br>Survey of the Greek writers<br>
+          History of the Greek alphabet</td></tr>
       </table>
     </div>
   </div>
 </div>
   <footer>
   <center style="padding-top:20px;">
-    <p style="color:rgb(232, 202, 180)">Est. 2026</p>
+    <p style="color:rgb(232, 202, 180);padding:20px;">Est. 2026</p>
+    <p id="splashtext" style = "padding:20px;padding-top:0px;color:rgb(232, 202, 180);"></p>
   </center>
   </footer>
+  
+  <script>
+    const quotes = ['“Everything is more beautiful because we are doomed. You will never be lovelier than you are now. We will never be here again.” ― Homer, <i>The Iliad</i>',
+      '“Everything is more beautiful because we are doomed. You will never be lovelier than you are now. We will never be here again.” ― Homer, <i>The Iliad</i>',
+      '“I hope we’re all ready to leave the phenomenal world, and enter into the sublime?” ― Donna Tartt, <i>The Secret History</i>',
+      '“It is the design of this ... to deduce the most important circumstances of its decline and fall; a revolution which will ever be remembered, and is still felt by the nations of the earth.”  ― Gibbon, <i>The Decline and Fall of the Roman Empire</i>',
+      '“For if the modern mind is whimsical and discursive, the classical mind is narrow, unhesitating, relentless.” ― Donna Tartt, <i>The Secret History</i>',
+      '“ad confligendum venientibus undique Poenis,<br>omnia cum belli trepido concussa tumultu<br>horrida contremuere sub altis aetheris auris,<br>in dubioque fuere utrorum ad regna cadendum<br>omnibus humanis esset terraque marique...”<br>―Lucretius'
+  ]
+    chosenQuote = Math.floor(Math.random() * quotes.length);
+    document.getElementById("splashtext").innerHTML = quotes[chosenQuote];
+  </script>
 </body>

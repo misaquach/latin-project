@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+<title>Lesson I | Latin</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="https://mos-maiorum.neocities.org/lingua-latina.css">
+<script src="https://mos-maiorum.neocities.org/sidebar.js"></script>
+</head>
+<body>
+<div class="sides-container">
+<div id="sidebar-container"></div>
+<div class="right-side"><h1>Lesson I. The Basics</h1>
+        <hr> 
+        <h3>❧ CASES</h3>
+        <h4>The nominative and accusative</h4>
+        <p>Observe the sentence <i>"She likes me."</i> Why does one say 'me' here, and not 'I'? Why 'she', and not 'her'? This is because of <b>cases</b>, forms words take on when they're in certain positions in sentences.</p>
+        <p>Latin has many more cases than English, but now, we'll look at the most basic ones.</p>
+        <ul>
+            <li><b>NOMINATIVE:</b> the agent behind the verb. The one <i>doing</i> something.</li>
+            <ul><li><b><i>The river</i></b> crosses the valley.</li>
+            <li><b><i>We</i></b> will resurrect the Empire.</li></ul>
+            <li><b>ACCUATIVE:</b> the one affected by the verb.</li><ul>
+            <li>The river crosses <b><i>the valley.</i></b></li>
+            <li>We will resurrect <b><i>the Empire.</i></b></li></ul>
+        </ul>
+        <h3>❧ DECLENSION I</h3>
+        <p>Nouns are sorted into <b>declensions</b> based on what letter they end in. Different endings lead to different case endings. Declension I nouns end with <b>-a</b> in the nominative; <b>-am</b> in the accusative.</p>
+        <ul>
+            <li><b>stella: </b>star</li>
+            <li><b>Roma: </b>Rome</li>
+            <li><b>puella: </b>girl</li>
+            <li><b>vīta:</b> life</li>
+            <li><b>via:</b> way, road</li>
+            <li><b>patria:</b> country, fatherland</li>
+            <li><b>terra: </b>land</li>
+        </ul>
+        <h3>Other Vocabulary</h3>
+        <ul>
+            <li><b>non:</b> not</li>
+            <li><b>videt:</b> sees</li>
+            <li><b>amat:</b> likes, loves</li>
+            <li><b>saepe:</b> often</li>
+            <li><b>bibit:</b> drinks</li>
+            <li><b>vult: </b>wants</li>
+            <li><b>habet:</b> has</li>
+        </ul>
+        <p>Note that in Latin, words go in this order: nominative, accusative, verb. There are also no words for 'the' and 'a.'</p><p>Let's look at some basic sentences. </p>
+        <ul>
+            <li>Puella stellas videt. <i>The girl sees the stars.</i> [Lit.: The girl the stars sees.]</li>
+            <li>Puella patriam non amat. <i>The girl does not like the country.</i></li>
+            
+        </ul>
+        <h4>More to be added</h4>
+<!--<div class="quiz">
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>-->
+</div>
+<script>/*
+(function(){
+  function buildQuiz(){
+    const output = [];
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+        const answers = [];
+        for(letter in currentQuestion.answers){
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}"/>
+              ${letter} :
+              ${currentQuestion.answers[letter]}<br>
+            `
+          );
+        }
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join("")} </div>
+          </div>`
+        );
+      }
+    );
+    quizContainer.innerHTML = output.join('');
+  }
+  function showResults(){
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+    let numCorrect = 0;
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      if(userAnswer === currentQuestion.correctAnswer){
+        answerContainers[questionNumber].style.color = 'lightgreen';
+        
+      }
+      else{
+        answerContainers[questionNumber].style.color = 'red';
+        
+      }
+    });
+  }
+  const quizContainer = document.getElementById('quiz');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: 'Which sentence means "The girl does not have the land"?',
+      answers: {
+        a: "Puellam terra non habet. ",
+        b: "Puella terras non habet.",
+        c: "Puella terram non habet."
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: 'Which means "The girl loves Rome"?',
+      answers: {
+        a: "Puella Romam amat.",
+        b: "Puellam Romas amat.",
+        c: "Puellam Roma amat."
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: 'Which means "The girl often drinks the water?"',
+      answers: {
+        a: "Puellam saepe aqua bibit.",
+        b: "Puella via aquam bibit.",
+        c: "Puellam via aqua bibit.",
+        d: "Puella saepe aquam bibit."
+      },
+      correctAnswer: "d"
+    }
+  ];
+  buildQuiz();
+  submitButton.addEventListener('click', showResults);
+})();
+
+</script></body>  
